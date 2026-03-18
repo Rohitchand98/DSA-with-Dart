@@ -1,5 +1,5 @@
 void main() {
-  int x = 1110;
+  int x = 12321;
   int rev_half = 0;
   if (x < 0 || (x % 10 == 0 && x != 0)) {
     print(false);
