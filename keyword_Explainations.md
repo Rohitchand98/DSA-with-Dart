@@ -37,26 +37,37 @@
         In Java, this evaluates to Integer.MIN_VALUE (≈ -2,147,483,648).
         In Dart, integers are unbounded, but the intent is the same: use a very small number to represent “negative infinity.”
 
-## Pattern of Making Pyramid or Hollow triangle
+## LeetCode “Missing Number” problem
 Step-by-Step Explanation
-int rows = 5;
+Input list
+    List<int> lst = [1, 2, 4];
+    This is the array of numbers. It’s supposed to contain all numbers from 0 to n, but one is missing.
 
-    This sets the height of the pyramid. You’ll get 5 rows of stars.
-    Outer loop (for (int i = 1; i <= rows; i++))
-    Controls the number of rows.
-    Each iteration prints one row of the pyramid.
+    Length of the list
 
-    First inner loop (for (int j = i; j < rows; j++))
-    Prints spaces before the stars.
-    This centers the pyramid by pushing stars to the right.
-    Example: On row 1, it prints 4 spaces; on row 2, 3 spaces, etc.
+    int n = lst.length; // n = 3
+    The list has 3 elements.
 
-Second inner loop (for (int k = 1; k <= (2 * i - 1); k++))
-Prints the actual stars and spaces inside the pyramid.
-(2 * i - 1) ensures the pyramid widens symmetrically (1, 3, 5, 7, …).
+    Expected sum formula
 
-Condition (if (k == 1 || k == (2 * i - 1) || i == rows))
-Prints * at the first position, last position, and entire bottom row.
-Everywhere else, it prints a space to make the pyramid hollow.
-print('');
-Moves to the next line after finishing one row.
+    double totalsum = (n * (n + 1)) / 2;
+    Formula for sum of first n natural numbers: 
+    𝑛(𝑛+1)2.
+    Here, 𝑛=3, so totalsum = 3×4/2=6.
+    This means if the list had numbers 0,1,2,3, the sum should be 6.
+
+    Actual sum of given list
+
+    double currentsum = 0;
+    for (int i = 0; i < lst.length; i++) {
+    currentsum += lst[i];
+    }
+    Adds up the list: 
+    1+2+4=7.
+
+    Find missing number
+    double ans = totalsum - currentsum;
+    print(ans);
+    6−7−1.
+    This result is wrong because the formula should use n+1 (since the array length is n, but the full range is 0..n).
+    
