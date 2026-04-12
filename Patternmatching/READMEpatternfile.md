@@ -35,10 +35,10 @@
 
 ## Top‑Left Triangle
 
-Outer loop (i) → starts at n and decreases down to 1.
-Inner loop (j) → prints stars equal to the current row number i.
-Result: The first row prints n stars, and each subsequent row prints one fewer, forming a right‑angled triangle aligned to the top‑left corner.
+    Outer loop (i) → starts at n and decreases down to 1.
+    Inner loop (j) → prints stars equal to the current row number i.
+    Result: The first row prints n stars, and each subsequent row prints one fewer, forming a right‑angled triangle aligned to the top‑left corner.
 
-🔹 Key Difference
-Bottom‑Left: Builds upward, increasing stars per row.
-Top‑Left: Builds downward, decreasing stars per row.
+    🔹 Key Difference
+    Bottom‑Left: Builds upward, increasing stars per row.
+    Top‑Left: Builds downward, decreasing stars per row.
