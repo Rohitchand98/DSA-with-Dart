@@ -25,3 +25,20 @@
     for (int j = 0; j < n; j++) → runs n times for columns in each row.
     stdout.write("* ") → prints stars side by side without line breaks.
     print("") → moves to the next line after each row.
+
+# how to make Buttom to top and top to buttom
+## Bottom‑Left Triangle
+    Outer loop (i) → controls the number of rows. It runs from 1 to n.
+    Inner loop (j) → prints stars in each row. For row i, it prints i stars.
+    Result: Each new row has one more star than the previous, forming a right‑angled triangle aligned to the bottom‑left corner.
+    Example (n = 5):
+
+## Top‑Left Triangle
+
+Outer loop (i) → starts at n and decreases down to 1.
+Inner loop (j) → prints stars equal to the current row number i.
+Result: The first row prints n stars, and each subsequent row prints one fewer, forming a right‑angled triangle aligned to the top‑left corner.
+
+🔹 Key Difference
+Bottom‑Left: Builds upward, increasing stars per row.
+Top‑Left: Builds downward, decreasing stars per row.
