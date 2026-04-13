@@ -1,26 +1,31 @@
+//Squares of a Sorted Array
+
 class Solution {
-  List<int> sortedSquares(List<int> nums) {
-    int n = nums.length;
-    List<int> result = List.filled(n, 0);
+  List<int> squareofsortedarr(List<int> nums) {
+    List<int> ans = List.filled(nums.length, 0);
+    int start = 0;
+    int end = nums.length - 1; //-1 to access the last element of the list
+    int ptr = ans.length - 1;
 
-    int left = 0;
-    int right = n - 1;
-    int pos = n - 1;
+    while (start <= end) {
+      int ss = nums[start] * nums[start];
+      int es = nums[end] * nums[end];
 
-    while (left <= right) {
-      int leftVal = nums[left].abs();
-      int rightVal = nums[right].abs();
-
-      if (leftVal > rightVal) {
-        result[pos] = leftVal * leftVal;
-        left++;
+      if (ss > es) {
+        ans[ptr] = ss;
+        start++;
       } else {
-        result[pos] = rightVal * rightVal;
-        right--;
+        ans[ptr] = es;
+        end--;
       }
-      pos--;
+      ptr--;
     }
-
-    return result;
+    return ans;
   }
+}
+
+void main() {
+  List<int> nums = [-4, -1, 0, 3, 10];
+  final solution = Solution();
+  print(solution.squareofsortedarr(nums));
 }
