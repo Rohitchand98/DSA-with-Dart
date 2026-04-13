@@ -42,3 +42,72 @@
     🔹 Key Difference
     Bottom‑Left: Builds upward, increasing stars per row.
     Top‑Left: Builds downward, decreasing stars per row.
+
+## Prints both top-to-bottom and bottom-to-top pyramids
+
+    Let’s carefully walk through the **Top-to-Bottom Pyramid code** you wrote earlier so you fully understand how it works:
+### Step-by-Step Explanation
+
+    1. **Outer loop (`i`) → controls the row number**
+    - Runs from `1` to `rows`.
+    - Each iteration prints one line of the pyramid.
+
+    2. **First inner loop (`j`) → prints spaces**
+    - For row `i`, it prints `(rows - i)` spaces.
+    - This centers the stars so the pyramid looks symmetric.
+    - Example:  
+        - Row 1 → 4 spaces  
+        - Row 2 → 3 spaces  
+        - Row 5 → 0 spaces  
+
+    3. **Second inner loop (`k`) → prints stars**
+    - Prints `(2 * i - 1)` stars.
+    - This ensures the star count grows as odd numbers: 1, 3, 5, 7, 9.
+    - Example:  
+        - Row 1 → 1 star  
+        - Row 2 → 3 stars  
+        - Row 5 → 9 stars  
+
+    4. **`print("")` → moves to the next line**
+    - After spaces + stars are printed, this starts a new line for the next row.
+
+    🔎 Why It Works
+    - Spaces push stars to the center.
+    - Stars grow in odd numbers, forming the pyramid shape.
+    - Outer loop ensures the pyramid builds row by row.
+
+    Alright Rohit, let’s break down the **Bottom-to-Top pyramid code** (the inverted pyramid) so you see how it works compared to the top-to-bottom one:
+
+    Step-by-Step Explanation
+
+    1. **Outer loop (`i`) → controls row count**
+    - Starts from `rows` and decreases down to `1`.
+    - This makes the pyramid shrink row by row.
+
+    2. **First inner loop (`j`) → prints spaces**
+    - For each row, it prints `(rows - i)` spaces.
+    - As `i` decreases, spaces increase, pushing stars inward.
+    - Example (rows = 5):  
+        - Row 5 → 0 spaces  
+        - Row 4 → 1 space  
+        - Row 1 → 4 spaces  
+
+    3. **Second inner loop (`k`) → prints stars**
+    - Prints `(2 * i - 1)` stars.
+    - As `i` decreases, stars reduce in odd numbers: 9, 7, 5, 3, 1.
+    - Example:  
+        - Row 5 → 9 stars  
+        - Row 4 → 7 stars  
+        - Row 1 → 1 star  
+
+    4. **`print("")` → moves to next line**
+    - Ensures each row prints on a new line.
+
+    ### 🔎 Why It Works
+    - The outer loop runs in reverse, so the pyramid shrinks.
+    - Spaces increase as stars decrease, giving the inverted pyramid shape.
+
+##
+
+
+
