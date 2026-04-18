@@ -17,7 +17,4 @@
 14. Swap two number without using 3rd variable
 15. Square of two sorted array
 16. Two sum II of sorted array
-
-## Advanced OOPS functions
-1. Advanced function uses in dart
-2. Handling_Null_safely is the null keywork uses in nullble and to show how to turn into non nullable variable
+17. 
