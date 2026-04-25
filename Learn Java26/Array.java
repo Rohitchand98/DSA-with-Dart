@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Array {
     void main() {
         //Array should have limited blocks of element numbers like new string[anynumbers];
@@ -20,5 +22,6 @@ public class Array {
             IO.println(arrayplayers[i]);
         }
         IO.print("This is one word : "+String.join(" ", newarray[2]));
+        IO.print("This is printed using Arrays.toString() :"+Arrays.toString(arrayplayer));
     }
 }
