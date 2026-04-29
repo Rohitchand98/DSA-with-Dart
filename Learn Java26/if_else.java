@@ -1,4 +1,4 @@
-public class new_old_if_else {
+public class if_else {
     void main() {
         int x=0;
 

@@ -1,10 +1,15 @@
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class arraylist{
     void main(){
+
+        /*an ArrayList is still straightforward, 
+        but you now have more expressive options thanks to updates in the collections API.  */
+
         //old way
         ArrayList<String> lst1= new ArrayList<>();
         lst1.add("Mango");
@@ -19,7 +24,11 @@ public class arraylist{
         IO.println(lst2);
         IO.println();
 
-
+        //Add multiple elements at once
+        ArrayList<String> lst= new ArrayList<>(Arrays.asList("Rohit","Tom","Hari"));
+        for(Object ele:lst){
+            IO.print(" "+ele);
+        }
 
         //for more than 1 datatype in list like <int, String>
         ArrayList<Object> lst3= new ArrayList<>();
